@@ -4,47 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Sign-up Form</title>
 </head>
 <body>
-    <div class="main">
+    <div class="wrapper">
         <div class="container">
-            <div class="sidebar">
-                 <div class="logo-div">
+            <div class="image">
+                <img src="img/1.jpg" alt="image" width="100%" height="100%">
+                <div class="logo-div">
                     <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="logo" class="logo"/>
                     <h1>Sign-up</h1>
                 </div> 
             </div>
-            <div class="form">
-                <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. sign up now to get started.</h2>
-                <h2>You know you want to</h2>
+            <div class="details">
                 <form action="#" method="post">
-                    <fieldset class="inputs">
-                        <legend>Lets do this!</legend>
+                    <div class="form-text">
+                        <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. sign up now to get started.</h1>
+                        <h2>You know you want to</h2>
+                        <h2>Lets do this</h2>
+                    </div>
+                    <div class="inputs">
+                        <div class="input-fields">
+                            <label for="first-name">First name <span class="star">*</span></label>
+                            <input type="text" name="first-name" id="first-name" placeholder="Enter your first name" required autofocus/>
+                        </div>
 
-                        <label for="first-name">First name</label>
-                        <input type="text" name="first-name" id="first-name" />
+                        <div class="input-fields">
+                            <label for="last-name">Last name <span class="star">*</span></label>
+                            <input type="text" name="last-name" id="last-name" placeholder="Enter your last name" required/>
 
-                        <label for="last-name">Last name</label>
-                        <input type="text" name="last-name" id="last-name" />
+                        </div>
 
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" />
+                        <div class="input-fields">
+                            <label for="email">Email <span class="star">*</span></label>
+                            <input type="email" name="email" id="email" placeholder="example123@gmail.com" required/>
+                        </div>
 
-                        <label for="phone-number">Phone number</label>
-                        <input type="tel" name="phone-number" id="phone-number" />
+                        <div class="input-fields">
+                            <label for="phone-number">Phone number</label>
+                            <input type="tel" name="phone-number" id="phone-number" placeholder="Enter your Mobile number" maxlength="10" />
+                        </div>
 
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" />
+                        <div class="input-fields">
+                            <label for="password">Password <span class="star">*</span></label>
+                            <input type="password" name="password" id="password" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required/>
+                            <p class="help">*UpperCase, LowerCase, Number/SpecialChar and min 8 Chars</p>
+                        </div>
 
-                        <label for="confirm">Confirm password</label>
-                        <input type="password" name="confirm-password" id="confirm" />
-                    </fieldset>
-                    <fieldset>
-                        <button type="submit" class="btn btn-success">Create Account</button>
-                    </fieldset>
-                    <p>Already have an account? <a href="http://">Log in</a> </p>
+                        <div class="input-fields">
+                            <label for="confirm">Confirm password <span class="star">*</span></label>
+                            <input type="password" name="confirm-password" id="confirm" minlength="8"  required/>
+                        </div>
+                    </div>
+                    <div class="register">
+                        <button type="submit" class="btn">Create Account</button>
+                        <p>Already have an account? <a href="http://">Log in</a> </p>
+                    </div>
                 </form>
             </div>
         </div>
